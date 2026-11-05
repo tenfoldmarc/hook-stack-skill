@@ -1,0 +1,25 @@
+{
+  "setupComplete": true,
+  "setupDate": "2026-11-04",
+  "brand": "Your Brand",
+  "projects_dir": "~/hook-stack",
+  "whisper_model": "small.en",
+  "language": "en",
+  "vocab": "Your Brand, Your Product",
+  "fixes": {},
+  "style": {},
+  "offer": {
+    "goal": "sales",
+    "link": "https://example.com/offer",
+    "price": "97",
+    "cta": "LEARN_MORE"
+  },
+  "budget": {"daily": 100, "currency": "USD"},
+  "countries": ["US"],
+  "meta": {
+    "account_id": "act_0000000000",
+    "page_id": "000000000000000",
+    "instagram_user_id": "00000000000000000",
+    "pixel_id": "000000000000000"
+  }
+}

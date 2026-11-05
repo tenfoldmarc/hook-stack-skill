@@ -1,0 +1,49 @@
+# hook-stack: the exact package versions this skill was tested with (Python 3.11 to 3.14).
+# scripts/setup_skill.py installs them into the skill's own .venv folder. Keep every line pinned:
+# an unpinned install pulls whatever is newest that day, and one bad release breaks every new install.
+# Known trap: faster-whisper 1.2.1 breaks with PyAV (av) 19 or newer, so av stays on 17.
+
+# what the scripts use
+av==17.0.1
+ctranslate2==4.7.1
+faster-whisper==1.2.1
+huggingface-hub==1.12.2
+numpy==2.4.4
+onnxruntime==1.25.1; sys_platform != "darwin" or platform_machine != "x86_64"
+onnxruntime==1.23.2; sys_platform == "darwin" and platform_machine == "x86_64"
+Pillow==12.2.0
+tokenizers==0.23.1
+
+# what those need, pinned too
+annotated-doc==0.0.5
+anyio==4.16.0
+certifi==2026.10.23
+filelock==4.2.7
+flatbuffers==25.12.19
+fsspec==2026.9.0
+h11==0.16.0
+hf-xet==1.8.0; platform_machine == "x86_64" or platform_machine == "amd64" or platform_machine == "AMD64" or platform_machine == "arm64" or platform_machine == "aarch64"
+httpcore==1.0.9
+httpx==0.28.1
+idna==3.20
+markdown-it-py==4.2.0
+mdurl==0.1.2
+packaging==26.3
+protobuf==7.36.2
+Pygments==2.21.0
+PyYAML==6.0.3
+rich==15.0.0
+setuptools==84.2.1
+shellingham==1.5.4
+tqdm==4.70.1
+typer==0.27.3
+typing_extensions==4.16.0
+
+# Windows only
+colorama==0.4.6; platform_system == "Windows"
+
+# Intel Macs only (onnxruntime 1.23.2 is the last release with Intel Mac builds, and it needs these)
+coloredlogs==15.0.1; sys_platform == "darwin" and platform_machine == "x86_64"
+humanfriendly==10.0; sys_platform == "darwin" and platform_machine == "x86_64"
+mpmath==1.3.0; sys_platform == "darwin" and platform_machine == "x86_64"
+sympy==1.14.0; sys_platform == "darwin" and platform_machine == "x86_64"

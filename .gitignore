@@ -1,0 +1,18 @@
+# personal settings and secrets: made on your computer, never committed
+config.json
+.env
+
+# the skill's own Python environment (scripts/setup_skill.py makes it from requirements.txt)
+.venv/
+.venv-*/
+__pycache__/
+*.pyc
+
+# system files
+*.log
+.DS_Store
+
+# projects saved inside the skill folder by mistake
+projects/
+ads/
+work/
